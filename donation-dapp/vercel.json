@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "buildCommand": "cd donation-dapp && npm install && npm run build",
+  "outputDirectory": "donation-dapp/build"
+}
