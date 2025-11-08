@@ -1,5 +1,14 @@
 {
   "version": 2,
-  "buildCommand": "cd donation-dapp && npm install && npm run build",
-  "outputDirectory": "donation-dapp/build"
+  "builds": [
+    {
+      "src": "donation-dapp/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
 }
